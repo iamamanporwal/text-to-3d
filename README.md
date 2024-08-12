@@ -19,7 +19,10 @@ The system consists of seven stages:
 * GAN's (Discrimination)
 
 ## Method Overview 🧊
-![image](https://github.com/user-attachments/assets/70edaf6f-fdd9-4609-bc93-2c8440d5be06)
+![image](https://github.com/user-attachments/assets/70edaf6f-fdd9-4609-bc93-2c8440d5be06)<br>
+In the Text-to-3D Object Generation project, the process begins with converting text prompts into 2D images using Stable Diffusion, which generates a visual representation of the described object or scene. These images are then analyzed by SAM 2, which segments individual objects within the image, isolating them for further processing. Control Net is employed to create a character sheet, offering multiple views of the segmented objects, essential for building a comprehensive 3D model.
+
+Following this, the character sheet is segmented into individual object views, which are then transformed from 2D into 3D models using Instant NGP/NeRF, producing realistic three-dimensional representations. These 3D models undergo evaluation by GANs, which assess their quality, determining whether they meet the required standards. If the model is satisfactory, it is rendered as the final 3D object; if not, the model is re-generated to ensure high-quality output. This streamlined process efficiently converts text into high-resolution 3D objects through a series of advanced AI-driven stages.
 
 ## Components 🛠️
 
